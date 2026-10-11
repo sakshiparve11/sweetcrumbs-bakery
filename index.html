@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetCrumbs Bakery</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">SweetCrumbs<span>.</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Our Treats</a>
+      <a href="#customize">Customize Cake</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="tagline">FRESHLY BAKED WITH LOVE ♡</p>
+      <h1>A little slice of <span>happiness.</span></h1>
+      <p>
+        Cakes, cookies and sweet little treats made for
+        your special moments.
+      </p>
+      <a href="#menu" class="btn">Explore Our Treats →</a>
+      <a href="#customize" class="text-link">Design Your Own Cake</a>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+        alt="Delicious celebration cake">
+    </div>
+  </section>
+
+  <section class="menu section" id="menu">
+    <p class="tagline">MADE TO MAKE YOU SMILE</p>
+    <h2>Our Sweet <span>Favourites</span></h2>
+    <p class="section-intro">
+      Find your next favourite treat.
+    </p>
+
+    <div class="products">
+      <article class="product">
+        <img
+          src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+          alt="Chocolate celebration cake">
+        <h3>Celebration Cake</h3>
+        <p>Perfect for your special days.</p>
+        <strong>From ₹699</strong>
+        <button class="add-btn" data-name="Celebration Cake" data-price="699">
+          Add to Treat List +
+        </button>
+      </article>
+
+      <article class="product">
+        <img
+          src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80"
+          alt="Chocolate chip cookies">
+        <h3>Chocolate Cookies</h3>
+        <p>Crispy outside, soft inside.</p>
+        <strong>From ₹249</strong>
+        <button class="add-btn" data-name="Chocolate Cookies" data-price="249">
+          Add to Treat List +
+        </button>
+      </article>
+
+      <article class="product">
+        <img
+          src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80"
+          alt="Frosted cupcakes">
+        <h3>Frosted Cupcakes</h3>
+        <p>Little treats, big happiness.</p>
+        <strong>From ₹299</strong>
+        <button class="add-btn" data-name="Frosted Cupcakes" data-price="299">
+          Add to Treat List +
+        </button>
+      </article>
+
+      <article class="product">
+        <img
+          src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80"
+          alt="Berry topped cake">
+        <h3>Berry Dream Cake</h3>
+        <p>Fresh, fruity and beautiful.</p>
+        <strong>From ₹799</strong>
+        <button class="add-btn" data-name="Berry Dream Cake" data-price="799">
+          Add to Treat List +
+        </button>
+      </article>
+    </div>
+
+    <div class="treat-list">
+      <h3>Your Treat List</h3>
+      <ul id="cartItems">
+        <li>No treats added yet.</li>
+      </ul>
+      <p id="cartTotal">Total: ₹0</p>
+    </div>
+  </section>
+
+  <section class="customizer section" id="customize">
+    <p class="tagline">YOUR CAKE, YOUR RULES</p>
+    <h2>Welcome to the <span>Cake Studio</span></h2>
+    <p class="section-intro">
+      Pick a flavour, add your favourite toppings and create your dream cake.
+    </p>
+
+    <div class="studio">
+
+      <div class="preview-panel">
+        <p class="preview-label">YOUR LIVE CAKE PREVIEW</p>
+
+        <div class="cake-stage">
+          <div class="cake" id="cake">
+            <div class="cake-top" id="cakeTop"></div>
+            <div class="cake-body" id="cakeBody">
+              <div class="filling"></div>
+              <div class="filling filling-two"></div>
+              <div class="drip" id="cakeDrip"></div>
+            </div>
+            <div class="toppings" id="cakeToppings"></div>
+            <div class="plate"></div>
+          </div>
+        </div>
+
+        <h3 id="previewName">Red Velvet Dream</h3>
+        <p id="previewDescription">A little drama, a lot of delicious.</p>
+        <p class="price" id="previewPrice">₹979</p>
+      </div>
+
+      <div class="controls">
+
+        <div class="form-group">
+          <h3>01. Choose your flavour</h3>
+          <label for="flavour">Cake flavour</label>
+          <select id="flavour">
+            <option value="red">Red Velvet — ₹899</option>
+            <option value="chocolate">Chocolate — ₹849</option>
+            <option value="vanilla">Vanilla — ₹799</option>
+            <option value="strawberry">Strawberry — ₹879</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <h3>02. Add your toppings</h3>
+
+          <label class="check-option">
+            <input type="checkbox" id="berries" checked>
+            🍓 Fresh berries (+₹80)
+          </label>
+
+          <label class="check-option">
+            <input type="checkbox" id="sprinkles">
+            🌈 Rainbow sprinkles (+₹30)
+          </label>
+
+          <label class="check-option">
+            <input type="checkbox" id="chocolateChips">
+            🍫 Chocolate chips (+₹50)
+          </label>
+
+          <label class="check-option">
+            <input type="checkbox" id="cream">
+            ☁️ Whipped cream (+₹40)
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h3>03. Select cake size</h3>
+          <label for="cakeSize">Cake size</label>
+          <select id="cakeSize">
+            <option value="0">0.5 kg — 4 to 6 people</option>
+            <option value="350">1 kg — 8 to 10 people (+₹350)</option>
+            <option value="700">2 kg — 15 to 18 people (+₹700)</option>
+          </select>
+        </div>
+
+        <div class="summary">
+          <div>
+            <p>Your custom cake</p>
+            <strong id="summaryName">Red Velvet Dream</strong>
+          </div>
+          <div>
+            <p>Estimated total</p>
+            <strong class="price" id="summaryPrice">₹979</strong>
+          </div>
+        </div>
+
+        <button class="btn order-btn" id="addCustomCake">
+          Add Custom Cake to Treat List →
+        </button>
+
+        <p class="note">
+          Demo website: orders and payments are not processed online.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div>
+      <p class="tagline">A LITTLE ABOUT US</p>
+      <h2>Baked with love, <span>shared with joy.</span></h2>
+      <p>
+        At SweetCrumbs, we believe every celebration deserves something
+        sweet. From freshly baked cookies to custom-designed cakes,
+        we make every treat special.
+      </p>
+      <a href="#customize" class="btn">Create Your Cake →</a>
+    </div>
+    <img
+    <img
+    src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=85"
+    alt="Beautiful celebration cake">
+  </section>
+
+  <footer>
+    <a href="#home" class="logo">SweetCrumbs<span>.</span></a>
+    <p>Freshly baked with a whole lot of heart ♡</p>
+    <small>© 2026 SweetCrumbs Bakery</small>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
